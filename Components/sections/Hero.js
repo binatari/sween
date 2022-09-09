@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="flex items-center justify-center flex-col">
     <div className='relative'>
-    <img src='./emoji.png' className='absolute -right-5 top-5' />
+    <img src='./emoji.png' className='absolute right-[0.75rem] md:-right-5 top-[3.25rem] md:top-5' />
     <h4 className='text-center uppercase '>
     The Designer -
     </h4>

@@ -11,8 +11,8 @@ const DefaultLayout = ({ children }) => {
   ];
   return (
     <div className="bg-[url(../public/bg.png)] min-h-screen bg-[#0A0909] relative">
-        <div className="fixed top-[46%] w-full flex justify-center">
-            <img src="./SWN.png" className="h-[8rem]"/>
+        <div className="fixed top-[47%] md:top-[46%] w-full flex justify-center">
+            <img src="./SWN.png" className="h-[6rem] md:h-[8rem]"/>
         </div>
             <div className="fixed top-1/2 w-full bg-black ">
         <InfiniteLooper speed="12" direction="left">
