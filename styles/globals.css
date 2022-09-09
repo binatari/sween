@@ -1,26 +1,67 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    font-family: Rajdhani, sans-serif;
+    color:white
   }
-  body {
-    color: white;
-    background: black;
+
+  h4 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
   }
+
+  h5 {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0em;
+  }
+  section{
+    height:100vh
+  }
+
+  .vertical{
+      writing-mode: vertical-lr;
+      text-align: center;
+      display: flex;
+      text-transform: uppercase;
+      justify-content: flex-end;
+  }
+}
+
+
+@keyframes slideAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.looper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.looper__innerList {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+}
+
+.looper__innerList[data-animate="true"] .looper__listInstance {
+  animation: slideAnimation linear infinite;   
+}
+
+.looper__listInstance {
+  display: flex;
+  width: max-content;
+
+  animation: none;
 }
